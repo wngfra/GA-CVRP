@@ -1,0 +1,98 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BoltzmannProb	utility.cpp	/^double BoltzmannProb(const double &diffE, const double &temperature) {$/;"	f
+CVRP	cvrp.hpp	/^      CVRP(int numOfGenes, int numOfGenerations, double crossoverRate, double mutationRate, double temperature): numOfGenes_(numOfGenes), numOfGenerations_(numOfGenerations), crossoverRate_(crossoverRate), mutationRate_(mutationRate), temperature_(temperature), solutionCounter_(0), lastSolution_(0) {};$/;"	f	class:CVRP
+CVRP	cvrp.hpp	/^class CVRP {$/;"	c
+DEPOT	gene.cpp	22;"	d	file:
+Gene	gene.hpp	/^    Gene() {}$/;"	f	class:Gene
+Gene	gene.hpp	/^    Gene(const Gene &gene): nodes_(gene.nodes_) {}$/;"	f	class:Gene
+Gene	gene.hpp	/^    Gene(const Gene *gp): nodes_(gp->nodes_) {}$/;"	f	class:Gene
+Gene	gene.hpp	/^    Gene(const vector<Node> &nodes): nodes_(nodes) {}$/;"	f	class:Gene
+Gene	gene.hpp	/^class Gene {$/;"	c
+MIN	gene.cpp	21;"	d	file:
+MIN	node.cpp	20;"	d	file:
+Node	node.hpp	/^    Node(const Node &node): tag_(node.tag_) {}$/;"	f	class:Node
+Node	node.hpp	/^    Node(const int tag): tag_(tag) {}$/;"	f	class:Node
+Node	node.hpp	/^class Node {$/;"	c
+PI	node.cpp	21;"	d	file:
+PI	utility.cpp	22;"	d	file:
+Rbx	gene.cpp	/^Gene Gene::Rbx(const Gene &parent, const double &crossoverRate) {$/;"	f	class:Gene
+_CVRP_CPP_	cvrp.cpp	10;"	d	file:
+_CVRP_HPP_	cvrp.hpp	2;"	d
+_GENE_CPP_	gene.cpp	10;"	d	file:
+_GENE_HPP_	gene.hpp	2;"	d
+_NODE_CPP_	node.cpp	10;"	d	file:
+_NODE_HPP_	node.hpp	2;"	d
+_UTILITY_CPP_	utility.cpp	10;"	d	file:
+_UTILITY_HPP_	utility.hpp	2;"	d
+acceptGene	gene.cpp	/^void Gene::acceptGene(Gene &gene, const double &temperature) {$/;"	f	class:Gene
+angle	node.cpp	/^double Node::angle() const { return angleTable_[0][this->tag() - 1]; }$/;"	f	class:Node
+angleTable_	node.cpp	/^vector< vector<double> > Node::angleTable_, Node::distanceTable_;$/;"	m	class:Node	file:
+angleTable_	node.hpp	/^    static vector< vector<double> > angleTable_, distanceTable_;$/;"	m	class:Node
+arctan	utility.cpp	/^double arctan(const int &dx, const int &dy) {$/;"	f
+capacity_	gene.cpp	/^int Gene::capacity_ = 0;$/;"	m	class:Gene	file:
+capacity_	gene.hpp	/^    static int capacity_, dimension_;$/;"	m	class:Gene
+chop	gene.cpp	/^void Gene::chop() {$/;"	f	class:Gene
+contain	utility.hpp	/^bool contain(const vector<T> &vec, const T &elem) {$/;"	f
+cost	gene.cpp	/^double Gene::cost() const {$/;"	f	class:Gene
+crossover	cvrp.cpp	/^void CVRP::crossover(const double &crossoverRate) {$/;"	f	class:CVRP
+crossoverRate_	cvrp.hpp	/^    double lastSolution_, crossoverRate_, mutationRate_, temperature_;$/;"	m	class:CVRP
+cvrp.cpp	cvrp.cpp	1;"	F
+cvrp.hpp	cvrp.hpp	1;"	F
+demand	node.cpp	/^int Node::demand() const { return demandList_[this->tag() - 1]; }$/;"	f	class:Node
+demandList_	node.cpp	/^vector<int> Node::demandList_;$/;"	m	class:Node	file:
+demandList_	node.hpp	/^    static vector<int> demandList_;$/;"	m	class:Node
+dimension_	cvrp.cpp	/^int CVRP::dimension_ = 0;$/;"	m	class:CVRP	file:
+dimension_	cvrp.hpp	/^    static int dimension_; $/;"	m	class:CVRP
+dimension_	gene.cpp	/^int Gene::dimension_ = 0;$/;"	m	class:Gene	file:
+dimension_	gene.hpp	/^    static int capacity_, dimension_;$/;"	m	class:Gene
+distanceTable_	node.cpp	/^vector< vector<double> > Node::angleTable_, Node::distanceTable_;$/;"	m	class:Node	file:
+distanceTable_	node.hpp	/^    static vector< vector<double> > angleTable_, distanceTable_;$/;"	m	class:Node
+evolve	cvrp.cpp	/^void CVRP::evolve() {$/;"	f	class:CVRP
+extract_int	utility.cpp	/^int extract_int(const string &term) {$/;"	f
+extract_ints	utility.cpp	/^vector<int> extract_ints(const string &term) {$/;"	f
+gene.cpp	gene.cpp	1;"	F
+gene.hpp	gene.hpp	1;"	F
+generateGenes	cvrp.cpp	/^void CVRP::generateGenes() {$/;"	f	class:CVRP
+generateRandom	utility.cpp	/^double generateRandom(int lower, int upper) {$/;"	f
+genes_	cvrp.hpp	/^    vector<Gene> genes_;$/;"	m	class:CVRP
+initialize	node.cpp	/^vector<int> Node::initialize(const char *fileName) {$/;"	f	class:Node
+kB	utility.cpp	23;"	d	file:
+lastSolution_	cvrp.hpp	/^    double lastSolution_, crossoverRate_, mutationRate_, temperature_;$/;"	m	class:CVRP
+main	main.cpp	/^int main(int argc, char** argv){$/;"	f
+main.cpp	main.cpp	1;"	F
+mutationRate_	cvrp.hpp	/^    double lastSolution_, crossoverRate_, mutationRate_, temperature_;$/;"	m	class:CVRP
+node.cpp	node.cpp	1;"	F
+node.hpp	node.hpp	1;"	F
+nodes_	gene.hpp	/^    vector<Node> nodes_;$/;"	m	class:Gene
+numOfGenerations_	cvrp.hpp	/^    int numOfGenes_, numOfGenerations_, solutionCounter_;$/;"	m	class:CVRP
+numOfGenes_	cvrp.hpp	/^    int numOfGenes_, numOfGenerations_, solutionCounter_;$/;"	m	class:CVRP
+operator !=	node.cpp	/^bool Node::operator!=(const Node &node) const { return !((*this) == node); }$/;"	f	class:Node
+operator ()	node.cpp	/^double Node::operator()(const Node &node) const {$/;"	f	class:Node
+operator <	node.cpp	/^bool Node::operator<(const Node &node) const { return this->tag() < node.tag(); }$/;"	f	class:Node
+operator =	gene.cpp	/^Gene &Gene::operator=(const Gene &gene) {$/;"	f	class:Gene
+operator =	node.cpp	/^Node& Node::operator=(const Node &node) { this->tag_ = node.tag_; return *this; }$/;"	f	class:Node
+operator ==	node.cpp	/^bool Node::operator==(const Node &node) const { return this->tag() == node.tag(); }$/;"	f	class:Node
+optMutation	gene.cpp	/^void Gene::optMutation(const double &mutationRate) {$/;"	f	class:Gene
+poster-sw16871.tex	poster/poster-sw16871.tex	1;"	F
+print	gene.cpp	/^void Gene::print() const {$/;"	f	class:Gene
+randomPos	gene.cpp	/^vector<int> Gene::randomPos() {$/;"	f	class:Gene
+readFile	utility.cpp	/^vector< vector<int> > readFile(const char *path) {$/;"	f
+selectByCost	cvrp.cpp	/^vector<int> CVRP::selectByCost() {$/;"	f	class:CVRP
+sequentialMutate	gene.cpp	/^void Gene::sequentialMutate(const double &mutationRate, const double &temperature) {$/;"	f	class:Gene
+setDimension	cvrp.cpp	/^void CVRP::setDimension(const int &dimension) { dimension_ = dimension; }$/;"	f	class:CVRP
+setDimensionAndCapacity	gene.cpp	/^int Gene::setDimensionAndCapacity(const vector<int> &dimensionAndCapacity) {$/;"	f	class:Gene
+solutionCounter_	cvrp.hpp	/^    int numOfGenes_, numOfGenerations_, solutionCounter_;$/;"	m	class:CVRP
+solve	cvrp.cpp	/^void CVRP::solve() {$/;"	f	class:CVRP
+sortByCost	cvrp.cpp	/^void CVRP::sortByCost() { sort(genes_.begin(), genes_.end(), [=](const Gene &i, const Gene &j){ return i.cost() < j.cost(); }); }$/;"	f	class:CVRP
+tag	node.cpp	/^int Node::tag() const { return tag_; }$/;"	f	class:Node
+tag_	node.hpp	/^    int tag_;$/;"	m	class:Node
+temperature_	cvrp.hpp	/^    double lastSolution_, crossoverRate_, mutationRate_, temperature_;$/;"	m	class:CVRP
+utility.cpp	utility.cpp	1;"	F
+utility.hpp	utility.hpp	1;"	F
+validate	gene.cpp	/^bool Gene::validate() {$/;"	f	class:Gene
+vectorCost	gene.cpp	/^double vectorCost(const vector<Node> &nodes) {$/;"	f
