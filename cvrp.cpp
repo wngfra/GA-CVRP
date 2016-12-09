@@ -76,16 +76,16 @@ void CVRP::crossover(const double &crossoverRate) {
 
 vector<int> CVRP::selectByCost() {
     vector<int> index;
-    double costList[genes_.size()];
+    vector<double> costList;
     double totalCost = 0, accumulatCost = 0;
     // calculate total cost and record every cost in the codeList 
-    for (int i = 0; i < genes_.size(); ++i) {
-        costList[i] = genes_[i].cost();
+    for (int i = 0; i < numOfGenes_; ++i) {
+        costList.push_back(genes_[i].cost());
         totalCost += costList[i];
     }
     
     // use accumulatCost to calculate accumulative probability
-    for (int j = genes_.size() - 1; j >= 0; --j) {
+    for (int j = numOfGenes_ - 1; j >= 0; --j) {
         accumulatCost += costList[j];
 
         if (generateRandom() < accumulatCost / totalCost) {
