@@ -16,7 +16,7 @@ class CVRP {
     vector<Gene> genes_;
     
   public:
-      CVRP(int numOfGenes, int numOfGenerations, double crossoverRate, double mutationRate, double temperature): numOfGenes_(numOfGenes), numOfGenerations_(numOfGenerations), crossoverRate_(crossoverRate), mutationRate_(mutationRate), temperature_(temperature), solutionCounter_(0), lastSolution_(0) {};
+    CVRP(int numOfGenes, int numOfGenerations, double crossoverRate, double mutationRate, double temperature): numOfGenes_(numOfGenes), numOfGenerations_(numOfGenerations), crossoverRate_(crossoverRate), mutationRate_(mutationRate), temperature_(temperature), solutionCounter_(0), lastSolution_(0) {};
     
     // generate genes via scanning counter-clockwise
     // routes without depots
@@ -29,7 +29,7 @@ class CVRP {
     void evolve();
     
     // sort the genes by cost
-    // increasing sequence
+    // in ascending order
     void sortByCost();
     
     // automation
