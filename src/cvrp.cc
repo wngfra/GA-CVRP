@@ -15,13 +15,13 @@
 #include "utility.h"
 
 #include <algorithm>
-#include <chrono>
+// #include <chrono>
 #include <cmath>
 #include <omp.h>
 #include <vector>
 
 using namespace std;
-using namespace std::chrono;
+// using namespace std::chrono;
 
 int CVRP::dimension_ = 0;
 
@@ -113,7 +113,7 @@ void CVRP::evolve() {
     double crossoverRate, mutationRate;
     double temperature = temperature_;
     
-    high_resolution_clock::time_point t1 = high_resolution_clock::now();
+    // high_resolution_clock::time_point t1 = high_resolution_clock::now();
     
     for (int i = 0; i < numOfGenerations_; ++i) {
         
@@ -143,11 +143,14 @@ void CVRP::evolve() {
 
         sortByCost();
         
+        /******************************************************************
+         *Timer use
+         
         high_resolution_clock::time_point t2 = high_resolution_clock::now();
         duration<double> time_span = duration_cast<duration<double>>(t2 - t1);
         
-        //if (time_span.count() > 1700) break;
-        /********************************
+        if (time_span.count() > 1700) break;
+         ********************************
          *           debugging
          ********************************/
         printf("generation %d temperature: %.3f, cost: %.3f\n", i + 1, temperature, lastSolution_);
