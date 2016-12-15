@@ -1,4 +1,4 @@
-/*********************************
+/********************************
  *  ___      __      ___        * 
  *  \  \    /  \    /  /       *
  *   \  \  / __ \  /  /  **     *
@@ -53,7 +53,7 @@ void Gene::print() const {
 Gene Gene::Rbx(const Gene &parent, const double &crossoverRate) {
     if (generateRandom() < crossoverRate) {
         vector<int> f_route{0}, m_route{0};
-        
+        // store the depot locations 
         for (int i = 1; i < nodes_.size(); ++i) {
             if (nodes_[i] == DEPOT) 
                 f_route.push_back(i);
@@ -97,7 +97,7 @@ Gene Gene::Rbx(const Gene &parent, const double &crossoverRate) {
     } else return *this;
 }
 
-// local optimal by the way
+// insert depots to the TSP like genes
 void Gene::chop() {
     int currentLoad = capacity_;
     nodes_.insert(nodes_.begin(), DEPOT);
