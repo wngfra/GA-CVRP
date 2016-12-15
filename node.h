@@ -1,5 +1,5 @@
-#ifndef _NODE_HPP_
-#define _NODE_HPP_
+#ifndef _NODE_H_
+#define _NODE_H_
 
 #include <cstdio>
 #include <vector>

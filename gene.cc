@@ -6,12 +6,12 @@
  *     \   /    \   /  * ** *   *
  *      ---      ---    SIAO     *
  * ******************************/
-#ifndef _GENE_CPP_
-#define _GENE_CPP_
+#ifndef _GENE_CC_
+#define _GENE_CC_
 
-#include "gene.hpp"
-#include "node.hpp"
-#include "utility.hpp"
+#include "gene.h"
+#include "node.h"
+#include "utility.h"
 
 #include <algorithm>
 #include <cstdio>

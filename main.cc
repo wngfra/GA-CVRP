@@ -6,9 +6,9 @@
  *     \   /    \   /  * ** *   *
  *      ---      ---    SIAO     *
  * ******************************/
-#include "cvrp.hpp"
-#include "gene.hpp"
-#include "node.hpp"
+#include "cvrp.h"
+#include "gene.h"
+#include "node.h"
 
 #include <chrono>
 #include <cstdio>

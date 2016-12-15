@@ -1,8 +1,8 @@
-#ifndef _CVRP_HPP_
-#define _CVRP_HPP_
+#ifndef _CVRP_H_
+#define _CVRP_H_
 
-#include "gene.hpp"
-#include "node.hpp"
+#include "gene.h"
+#include "node.h"
 
 #include <vector>
 

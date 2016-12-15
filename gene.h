@@ -1,7 +1,7 @@
-#ifndef _GENE_HPP_
-#define _GENE_HPP_
+#ifndef _GENE_H_
+#define _GENE_H_
 
-#include "node.hpp"
+#include "node.h"
 
 #include <algorithm>
 #include <vector>

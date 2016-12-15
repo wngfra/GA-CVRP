@@ -6,13 +6,13 @@
  *     \   /    \   /  * ** *   *
  *      ---      ---    SIAO     *
  * ******************************/
-#ifndef _CVRP_CPP_
-#define _CVRP_CPP_
+#ifndef _CVRP_CC_
+#define _CVRP_CC_
 
-#include "cvrp.hpp"
-#include "gene.hpp"
-#include "node.hpp"
-#include "utility.hpp"
+#include "cvrp.h"
+#include "gene.h"
+#include "node.h"
+#include "utility.h"
 
 #include <algorithm>
 #include <chrono>

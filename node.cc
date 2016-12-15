@@ -6,11 +6,11 @@
  *     \   /    \   /  * ** *   *
  *      ---      ---    SIAO     *
  * ******************************/
-#ifndef _NODE_CPP_ 
-#define _NODE_CPP_
+#ifndef _NODE_CC_ 
+#define _NODE_CC_
 
-#include "node.hpp"
-#include "utility.hpp"
+#include "node.h"
+#include "utility.h"
 
 #include <algorithm>
 #include <cmath>

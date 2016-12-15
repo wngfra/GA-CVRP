@@ -6,10 +6,10 @@
  *     \   /    \   /  * ** *   *
  *      ---      ---    SIAO     *
  * ******************************/
-#ifndef _UTILITY_CPP_
-#define _UTILITY_CPP_
+#ifndef _UTILITY_CC_
+#define _UTILITY_CC_
 
-#include "utility.hpp"
+#include "utility.h"
 
 #include <algorithm>
 #include <fstream>
