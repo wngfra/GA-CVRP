@@ -54,7 +54,8 @@ vector<int> extract_ints(const string &term) {
     istringstream ss(term);
 	string token;
 	vector<int> data;
-	while(getline(ss, token, ' ')) data.push_back(extract_int(token));
+	while(getline(ss, token, ' ')) 
+        data.push_back(extract_int(token));
     return data;
 }
 
