@@ -52,9 +52,9 @@ int extract_int(const string &term) {
 vector<int> extract_ints(const string &term) {
 	// split string term into string vector by spaces
     istringstream ss(term);
-	string token;
-	vector<int> data;
-	while(getline(ss, token, ' ')) 
+    string token;
+    vector<int> data;
+    while(getline(ss, token, ' ')) 
         data.push_back(extract_int(token));
     return data;
 }
@@ -100,13 +100,13 @@ vector< vector<int> > readFile(const char *path) {
     }
     
     //ignore the demand section start line	
-	file.ignore(256, '\n');
+    file.ignore(256, '\n');
 
     vector<int> demand;
-	// read the customer demand to the 1D array
-	for (int j = 0; j < constraint[0]; ++j) {
-		getline(file, line);
-		demand.push_back(extract_ints(line)[1]);
+    // read the customer demand to the 1D array
+    for (int j = 0; j < constraint[0]; ++j) {
+        getline(file, line);
+	demand.push_back(extract_ints(line)[1]);
     }
     data.push_back(demand);
    
