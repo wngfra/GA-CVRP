@@ -219,7 +219,7 @@ void Gene::sequentialMutate(const double &mutationRate, const double &temperatur
     }
 }
 
-// if gene's cost is smaller ans it's valid, swap it with the current gene
+// if gene's cost is smaller and it's valid, swap it with the current gene
 void Gene::acceptGene(Gene &gene, const double &temperature) {
     double diffE = this->cost() - gene.cost();
     if (diffE > 0 || generateRandom() < BoltzmannProb(- diffE, temperature))
