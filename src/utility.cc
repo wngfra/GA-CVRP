@@ -4,7 +4,7 @@
  *   \  \  / __ \  /  /  **     *
  *    \  \/ /  \ \/  /  *  *     *
  *     \   /    \   /  * ** *   *
- *      ---      ---    SIAO     *
+ *      ---      ---   wngfra    *
  * ******************************/
 #ifndef _UTILITY_CC_
 #define _UTILITY_CC_
@@ -93,8 +93,7 @@ vector< vector<int> > readFile(const char *path) {
     for (int i = 0; i < constraint[0]; ++i) {
         getline(file, line);
         vector<int> p = extract_ints(line);
-        // p[1]: x-coordinate, p[2]: y-coordinate
-        // -> p[0]: x, p[1]: y
+        // p[0]: x, p[1]: y
         p.erase(p.begin());
         data.push_back(p);
     }
@@ -103,7 +102,7 @@ vector< vector<int> > readFile(const char *path) {
     file.ignore(256, '\n');
 
     vector<int> demand;
-    // read the customer demand to the 1D array
+    // read the customer demand to the vector
     for (int j = 0; j < constraint[0]; ++j) {
         getline(file, line);
 	demand.push_back(extract_ints(line)[1]);
