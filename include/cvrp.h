@@ -17,10 +17,13 @@ class CVRP {
     
   public:
     CVRP(int numOfGenes, int numOfGenerations, double crossoverRate, double mutationRate, double temperature): numOfGenes_(numOfGenes), numOfGenerations_(numOfGenerations), crossoverRate_(crossoverRate), mutationRate_(mutationRate), temperature_(temperature), solutionCounter_(0), lastSolution_(0) {};
-    
+
     // generate genes via scanning counter-clockwise
     // routes without depots
     void generateGenes();
+
+    // export evolution data for visualization
+    void exportEvolutionData(int generation, double temperature);
     
     // select and crossover
     void crossover(const double&);
