@@ -13,20 +13,27 @@ A Genetic Algorithm-based solver for the Capacitated Vehicle Routing Problem (CV
 
 ## Requirements
 
-### For Building and Running
-
 - `CMake` 2.8 or later
 - C++ compiler with C++11 support
 - OpenMP support
-
-### For Visualization (Optional)
-
-- Python 3.7+
-- pip (for installing Python dependencies)
+- `gnuplot` (for visualization) - Install with:
+  - Linux: `sudo apt-get install gnuplot`
+  - macOS: `brew install gnuplot`
+  - Windows: Download from http://www.gnuplot.info/
 
 ## Quick Start
 
-### 1. Build the Project
+### 1. Install gnuplot
+
+```bash
+# Linux
+sudo apt-get install gnuplot
+
+# macOS
+brew install gnuplot
+```
+
+### 2. Build the Project
 
 ```bash
 mkdir -p build && cd build
@@ -34,36 +41,22 @@ cmake ..
 make
 ```
 
-### 2. Run the Solver
+### 3. Run the Solver (with automatic visualization)
 
 ```bash
 ./CVRP ../fruitybun250.vrp
 ```
 
-### 3. Visualize the Results
-
-```bash
-cd ..
-pip install -r requirements.txt  # First time only
-python visualize_all.py
-```
+The solver will automatically generate beautiful visualizations after completing the optimization!
 
 ## Visualization
 
-This project includes a comprehensive visualization suite that creates beautiful plots for:
+This project includes a **pure C++ visualization system** that creates beautiful plots using gnuplot:
 
-1. **Evolution Process** - Shows how the algorithm converges over generations
-2. **Final Routes** - Displays the optimized vehicle routes on a 2D map
+1. **Evolution Process** - Shows cost convergence, temperature decay, and stagnation indicators
+2. **Final Routes** - Displays the optimized vehicle routes on a 2D map with statistics
 
-### Quick Visualization
-
-After running the solver, generate all visualizations:
-
-```bash
-python visualize_all.py
-```
-
-For detailed visualization options and usage, see [VISUALIZATION.md](VISUALIZATION.md).
+Visualizations are **automatically generated** when you run the solver. No additional steps needed!
 
 ## Output Files
 

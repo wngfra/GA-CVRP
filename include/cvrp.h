@@ -22,9 +22,6 @@ class CVRP {
     // routes without depots
     void generateGenes();
 
-    // export evolution data for visualization
-    void exportEvolutionData(int generation, double temperature);
-    
     // select and crossover
     void crossover(const double&);
    

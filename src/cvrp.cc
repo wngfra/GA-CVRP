@@ -13,11 +13,11 @@
 #include "gene.h"
 #include "node.h"
 #include "utility.h"
+#include "visualizer.h"
 
 #include <algorithm>
 // #include <chrono>
 #include <cmath>
-#include <fstream>
 #include <omp.h>
 #include <vector>
 
@@ -99,22 +99,6 @@ vector<int> CVRP::selectByCost() {
 
 void CVRP::sortByCost() { sort(genes_.begin(), genes_.end(), [=](const Gene &i, const Gene &j){ return i.cost() < j.cost(); }); }
 
-void CVRP::exportEvolutionData(int generation, double temperature) {
-    static bool first_write = true;
-    ofstream outfile;
-
-    if (first_write) {
-        outfile.open("evolution_data.csv", ios::out);
-        outfile << "generation,best_cost,temperature,solution_counter\n";
-        first_write = false;
-    } else {
-        outfile.open("evolution_data.csv", ios::app);
-    }
-
-    outfile << generation << "," << genes_[0].cost() << "," << temperature << "," << solutionCounter_ << "\n";
-    outfile.close();
-}
-
 void CVRP::solve() {
 
     generateGenes();
@@ -161,7 +145,7 @@ void CVRP::evolve() {
         sortByCost();
 
         // Export data for visualization
-        exportEvolutionData(i + 1, temperature);
+        Visualizer::exportEvolutionData(i + 1, genes_[0].cost(), temperature, solutionCounter_);
 
         /******************************************************************
          *Timer use
